@@ -1,0 +1,19 @@
+[package]
+name = "calibuh"
+version = "0.1.0"
+edition = "2021"
+authors = ["Oskar Manhart <me@oskar.global>"]
+license = "MIT"
+
+[dependencies]
+tokio = { version = "1.32.0", features = ["full"] }
+serde = { version = "1.0.188", features = ["derive"] }
+dotenvy = "0.15.7"
+serde_json = "1.0.107"
+implicit-clone = "=0.3.6"
+
+sqlx = { version = "0.7.1", features = ["macros", "sqlite", "runtime-tokio", "tls-rustls", "time", "chrono"] }
+chrono = { version = "0.4.30", features = ["serde"] }
+axum = "0.6.20"
+yew = { git = "https://github.com/yewstack/yew/", branch = "master", features = ["ssr"] }
+tower-http = { version = "0.4.4", features = ["fs"] }
